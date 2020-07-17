@@ -55,6 +55,22 @@ app.post("/api/notes", (req, res) => {
     return res.json(savedNotes);
 });
 
+// Receives query parameter containing ID of the note to delete.
+app.delete("/api/notes/:id", (req, res) => {
+    let savedNotes = JSON.parse(fs.readFileSync("./db/db.json", "utf8")); // reads db.json
+    let noteID = savedNotes.filter(x=>x.id!=req.params.id) // returns route with all notes EXCEPT the ID we are deleting
+    console.log("NOTE ID", noteID)
+    console.log("REQ.PARAMS.ID", req.params.id)
+
+    // writes all new notes to db.json
+    fs.writeFileSync("./db/db.json", JSON.stringify(noteID), (err) => {
+        if (err) throw err;
+        console.log("error");
+    });
+    console.log("Your note has been deleted");
+    return res.json(savedNotes);
+});
+
 // returns notes.html file
 app.get("/notes", (req, res) => {
     res.sendFile(path.join(__dirname, "/public/notes.html"));
