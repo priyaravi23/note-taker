@@ -1,0 +1,27 @@
+{
+  "name": "note-taker",
+  "version": "1.0.0",
+  "description": "write, save, and delete notes",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priyaravi23/note-taker.git"
+  },
+  "keywords": [
+    "express",
+    "backend",
+    "JSON",
+    "API",
+    "javascript"
+  ],
+  "author": "Priya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/priyaravi23/note-taker/issues"
+  },
+  "homepage": "https://github.com/priyaravi23/note-taker#readme"
+}
