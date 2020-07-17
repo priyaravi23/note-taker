@@ -23,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/priyaravi23/note-taker/issues"
   },
-  "homepage": "https://github.com/priyaravi23/note-taker#readme"
+  "homepage": "https://github.com/priyaravi23/note-taker#readme",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "uuid": "^8.2.0",
+    "uuidv4": "^6.2.0"
+  }
 }
