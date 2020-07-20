@@ -6,7 +6,7 @@ const util = require("util");
 
 // Sets up the Express App
 const app = express();
-const PORT = process.env.PORT || 9080;
+const PORT = process.env.PORT || 3001;
 
 // Sets up the Express app to handle data parsing and to read static files
 app.use(express.urlencoded({extended: true}));
@@ -83,5 +83,5 @@ app.get("*", (req, res) => {
 
 // Starts the server to begin listening
 app.listen(PORT, () => {
-    console.log('App listening on PORT: ' + PORT);
+    console.log(`API server now on port ${PORT}!`);
 });
